@@ -60,7 +60,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary--main {
+.heading-primary-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -72,12 +72,12 @@ body {
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   /* 
-  animation-delay: 3s; 
-  animation-iteration-count: 3;
-  */
+    animation-delay: 3s; 
+    animation-iteration-count: 3;
+    */
 }
 
-.heading-primary--sub {
+.heading-primary-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -180,8 +180,7 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
@@ -201,6 +200,12 @@ body {
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 .btn:active {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
@@ -211,6 +216,10 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
 }
 
 .btn::after {
@@ -225,16 +234,6 @@ body {
   z-index: -1;
   -webkit-transition: all .4s;
   transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-          transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 .btn--animated {
